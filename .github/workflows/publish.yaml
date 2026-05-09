@@ -22,8 +22,8 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
           # Copy the content from the main branch to the site branch
-          cp -r ./content ./src/src/content
-          git add ./src/src/content
+          [ -d ./content ] && cp -r ./content ./src/src/content
+          [ -d ./src/src/content ] && git add ./src/src/content
           git add ./.github
           git commit -m "Publish content to GitHub Pages"
           git push origin main:site
