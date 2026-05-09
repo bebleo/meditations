@@ -25,8 +25,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  BUILD_PATH: "." # default value when not using subfolders
-  # BUILD_PATH: subfolder
+  BUILD_PATH: "./src" # update as needed to point to the directory containing your Astro project.
 
 jobs:
   build:
